@@ -1,0 +1,3278 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/28/2021 11:46:10 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TECH-009"
+  DTS:CreatorName="KONGA\oluebubechukwu.okoli"
+  DTS:DTSID="{D4965CBB-CA88-4A53-8476-F8D541D4B439}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="8192"
+  DTS:MaxErrorCount="5"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{D873D731-0E0E-4EE2-94B1-80E554BCF337}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Connection1]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Connection for Employees"
+      DTS:DTSID="{4426F4F3-541F-4FC7-A9FA-B07836918D8C}"
+      DTS:ObjectName="Connection1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\oluebubechukwu.okoli.KONGA\Downloads\EMPLOYEES.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employee_id"
+              DTS:DTSID="{D0CBAE44-9E51-421D-A4C1-DBBFBB2476D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{232D497B-82DF-4872-92E0-C9BDD11BD953}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{83B25167-30B0-4052-9DBF-505944B1595C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{ADF15278-EE94-4E3B-B933-973FA997B95E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone_number"
+              DTS:DTSID="{376B2F02-02A3-4A52-9CFD-6567E7F52774}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hire_date"
+              DTS:DTSID="{B9D565E4-F4A6-4DE9-B5D7-B470032CC40C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="job_id"
+              DTS:DTSID="{0FB5D3B4-5629-47A3-852A-6EC7D21E4F88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salary"
+              DTS:DTSID="{C2810153-85A8-46C6-8DB3-2E0EEF6B16D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="commission_pct"
+              DTS:DTSID="{19B72ED1-1399-4FBB-92D2-9481E7C7D538}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manager_id"
+              DTS:DTSID="{9C8EA3FF-545D-474C-A2C4-DCDBAF3D7B87}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_id"
+              DTS:DTSID="{FA4663C3-2BF7-43C3-839E-BA39EADFDAA0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSVInput]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="EmployeesData"
+      DTS:DTSID="{3CA94D9E-12A6-49A8-9C79-A27092A736C8}"
+      DTS:ObjectName="CSVInput">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\oluebubechukwu.okoli.KONGA\Downloads\EMPLOYEES.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employee_id"
+              DTS:DTSID="{56280F0D-4C4F-4CEF-B6E2-530389FB4A2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{B25BCFD5-7120-40A5-B5EF-04CD46A4B020}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{E554F34C-8AB6-46DD-BFCF-7D8CCECADCD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{C643BED3-D642-4019-9B68-498296070A9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone_number"
+              DTS:DTSID="{035592B0-D77C-4A9B-9510-631A24F68530}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hire_date"
+              DTS:DTSID="{D0B7D5B7-C209-410C-AB86-48F017943C35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="job_id"
+              DTS:DTSID="{055095E7-F4C9-416E-B6E9-476AC3160661}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salary"
+              DTS:DTSID="{A4481401-3474-4F4F-BBF8-3491DF6E2E50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="commission_pct"
+              DTS:DTSID="{585031F5-D491-4C66-9A72-27B292B1016F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manager_id"
+              DTS:DTSID="{52AA6F8F-99F4-4AD4-B122-32CBD526B658}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_id"
+              DTS:DTSID="{2C33322F-01A9-40F0-B449-BA807E1ACD6B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSVPull]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1394A4B9-860F-4280-93C6-D006B1281B25}"
+      DTS:ObjectName="CSVPull">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\oluebubechukwu.okoli.KONGA\Downloads\EMPLOYEES.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employee_id"
+              DTS:DTSID="{7CD00869-ABAE-4447-B6C1-D6021D86A76A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{E7C41009-1080-4F13-A96D-A6504466CBD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{FA587E87-CBD4-4A98-8CC4-5C7FDB728A74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{6AC9B5ED-DFF2-4E3C-911D-C938F628654D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone_number"
+              DTS:DTSID="{ED9529BA-8291-4F53-B795-505A186D1407}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hire_date"
+              DTS:DTSID="{4EAFF151-E30C-4A31-A498-2630889B3E20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="job_id"
+              DTS:DTSID="{1F955048-8DC5-4186-A643-553D859DCC0B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salary"
+              DTS:DTSID="{91A226AA-4017-4110-AE34-CAFFFB892C7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="commission_pct"
+              DTS:DTSID="{F654E60D-93B1-43C3-A4D6-4A8B92AECE80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manager_id"
+              DTS:DTSID="{646527C7-02A9-4F69-A2BE-119291282E2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_id"
+              DTS:DTSID="{581F508B-2646-4E3D-8AE5-E8B36743FE0B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DepartmentsData]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{52C5347A-AEAF-4265-97E8-356C4718A9F8}"
+      DTS:ObjectName="DepartmentsData">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\oluebubechukwu.okoli.KONGA\Downloads\DEPARTMENTS.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_id"
+              DTS:DTSID="{12EDC293-0A5F-43BE-BA5B-DD70DD14AA0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_name"
+              DTS:DTSID="{FE8BC405-AC3F-4A79-B24F-E364DCD8FC39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manager_id"
+              DTS:DTSID="{285197A9-45C7-4A3B-B237-BD803200F32D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location_id"
+              DTS:DTSID="{2953CF3F-91F2-4763-A866-3E382A41F4F5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C72DCCD8-7203-405D-BD05-78DBE3320AC4}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\oluebubechukwu.okoli.KONGA\Downloads\EMPLOYEES.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OData Source]"
+      DTS:CreationName="ODATA"
+      DTS:DTSID="{A20F63D5-D54E-4279-A3EB-7B8148EDF08A}"
+      DTS:ObjectName="OData Source">
+      <DTS:ObjectData>
+        <ODataConnectionManager
+          UserName="kongatech@tdafrica.com"
+          Url="https://kongaprod.operations.dynamics.com/data"
+          ConnectionString="Service Document Url=https://kongaprod.operations.dynamics.com/data;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;User ID=kongatech@tdafrica.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104"
+          MicrosoftOnlineServicesAuth="False"
+          AuthType="MicrosoftDynamicsCrmOnline"
+          ConnectByProxy="False">
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAV1rY/nhReka/pi2jj6MIewAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACC+MtizAfRGQrFwk69Wpg4AAAAAASAAACgAAAAEAAAAF8/LE1524lvrgF9uy1pm+kYAAAAApYOe9XwUNDL7Z7qyFQvAmmFVIuMbSohFAAAAKGr0t8QouUG+mSdLEUKPfpnPjmS</Password>
+        </ODataConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Output Low Earners]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F98B7C1D-1E85-4B20-808C-81014B32638E}"
+      DTS:ObjectName="Output Low Earners">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\oluebubechukwu.okoli.KONGA\Desktop\Data\lowguys.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sort.employee_id"
+              DTS:DTSID="{81ACBED6-AF4C-4664-AA5D-A243AEA72864}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{53895153-0C3A-44EE-A87B-72D769D219A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{2F6ABC9A-62AF-4CA3-B331-AAA9E8D85FA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{D2A1F30A-AE1A-4D5A-9AA6-F465ED5F2985}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone_number"
+              DTS:DTSID="{F7055F5F-DADE-4690-9D76-82760C38804E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hire_date"
+              DTS:DTSID="{7DD4F9D5-7BAC-4B5B-A586-A4A32E205FC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="job_id"
+              DTS:DTSID="{3B985FE0-4ED4-4A70-8C2C-0593A94ED70E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sort.salary"
+              DTS:DTSID="{E7E96BC3-057E-4586-98F0-0CDD14E04570}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="commission_pct"
+              DTS:DTSID="{B3A27C6A-5709-45F3-AA61-455803027029}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manager_id"
+              DTS:DTSID="{B441221B-0D1A-4D23-84EC-5DDFE2AE5FBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_id"
+              DTS:DTSID="{D0B52ABE-798E-44DD-A295-A3E61AD563C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion.salary"
+              DTS:DTSID="{9B8DB5E4-1222-43F2-9D58-4ED40D5091B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion.employee_id"
+              DTS:DTSID="{7950818A-194D-4A51-B4CE-1B51ED6E8B1C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RunFile]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{890F3FA4-9E24-4206-929F-8472B187F19E}"
+      DTS:ObjectName="RunFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="RunFile" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TECH-009\LOCALSQLSERVER]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6BCDAA12-C929-4A9C-B86C-C19AE8A1815F}"
+      DTS:ObjectName="TECH-009\LOCALSQLSERVER">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=TECH-009\LOCALSQLSERVER;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{6BCDAA12-C929-4A9C-B86C-C19AE8A1815F}TECH-009\LOCALSQLSERVER;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TECH-009\LOCALSQLSERVER 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{423647C3-2A03-4E64-BA8E-3F5777136996}"
+      DTS:ObjectName="TECH-009\LOCALSQLSERVER 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=TECH-009\LOCALSQLSERVER;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{423647C3-2A03-4E64-BA8E-3F5777136996}TECH-009\LOCALSQLSERVER 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TECH-009\SQLSERVERONKONGA.master]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{456E799F-FF2E-4A58-A819-C17A886D1AD4}"
+      DTS:ObjectName="TECH-009\SQLSERVERONKONGA.master">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=TECH-009\SQLSERVERONKONGA;Initial Catalog=master;Integrated Security=True;Application Name=SSIS-Package-{456E799F-FF2E-4A58-A819-C17A886D1AD4}TECH-009\SQLSERVERONKONGA.master;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Bulk Insert Task"
+      DTS:CreationName="Microsoft.BulkInsertTask"
+      DTS:Description="Bulk Insert Task"
+      DTS:DTSID="{27BDD0F2-4F0C-43C9-B2FB-13B0319943B3}"
+      DTS:ExecutableType="Microsoft.BulkInsertTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Bulk Insert Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <BulkInsertTask:BulkInsertTaskData
+          BulkInsertTask:BatchSize="100"
+          BulkInsertTask:SourceConnectionName="{3CA94D9E-12A6-49A8-9C79-A27092A736C8}"
+          BulkInsertTask:DestinationConnectionName="{6BCDAA12-C929-4A9C-B86C-C19AE8A1815F}"
+          BulkInsertTask:DestinationTableName="[dbo].[employez]"
+          BulkInsertTask:MaximumErrors="5" xmlns:BulkInsertTask="www.microsoft.com/sqlserver/dts/tasks/bulkinserttask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3E6C7B80-17F4-47F9-8374-1C6465F4150D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Employees Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E8FB4882-CBBC-4598-B667-630E0255C0F8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:MaxErrorCount="5"
+      DTS:ObjectName="Load Employees Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Employees Data\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Conditional Split.Inputs[Conditional Split Input].Columns[salary]"
+                      cachedDataType="numeric"
+                      cachedName="salary"
+                      cachedPrecision="18"
+                      lineageId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output].Columns[salary]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Conditional Split.Outputs[Error]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Error"
+                  synchronousInputId="Package\Load Employees Data\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="RedirectRow">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output].Columns[salary]} &lt; 5000</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[Data Conversion].salary &lt; 5000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Employees Data\Conditional Split.Outputs[Remove Lower Earners]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Remove Lower Earners"
+                  synchronousInputId="Package\Load Employees Data\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Employees Data\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load Employees Data\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Data Conversion.Inputs[Data Conversion Input].Columns[salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="salary"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[salary]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Data Conversion.Inputs[Data Conversion Input].Columns[employee_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="employee_id"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[employee_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load Employees Data\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output].Columns[salary]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output].Columns[salary]"
+                      name="salary"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[salary]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output].Columns[employee_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output].Columns[employee_id]"
+                      name="employee_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[employee_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load Employees Data\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="8192"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header">Low Earners</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Employees Data\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Output Low Earners]"
+                  connectionManagerRefId="Package.ConnectionManagers[Output Low Earners]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_name"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[last_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[email]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[email]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[phone_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="phone_number"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[phone_number]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[phone_number]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[hire_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hire_date"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[hire_date]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[hire_date]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[job_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="job_id"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[job_id]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[job_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[commission_pct]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="commission_pct"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[commission_pct]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[commission_pct]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[manager_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manager_id"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[manager_id]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[manager_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[department_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[department_id]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[department_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[employee_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="employee_id"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sort.employee_id]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[employee_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].Columns[salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="salary"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sort.salary]"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[salary]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="phone_number" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[hire_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hire_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[job_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[commission_pct]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="commission_pct" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="manager_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="department_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sort.employee_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sort.employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sort.salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sort.salary" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion.salary]"
+                      dataType="numeric"
+                      name="Data Conversion.salary"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion.employee_id]"
+                      dataType="i4"
+                      name="Data Conversion.employee_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="8192"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Employees Data\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSVPull]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSVPull]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[employee_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]"
+                      name="employee_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                      name="first_name"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                      name="last_name"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[phone_number]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]"
+                      name="phone_number"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hire_date]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]"
+                      name="hire_date"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[job_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]"
+                      name="job_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[salary]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[salary]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[salary]"
+                      name="salary"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[commission_pct]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[commission_pct]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[commission_pct]"
+                      name="commission_pct"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[manager_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]"
+                      name="manager_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[department_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]"
+                      name="department_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[employee_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="phone_number" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hire_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hire_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[job_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="salary" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[commission_pct]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="commission_pct" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="manager_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="department_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Flat File Source 1"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="8192"
+              name="Flat File Source 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Employees Data\Flat File Source 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DepartmentsData]"
+                  connectionManagerRefId="Package.ConnectionManagers[DepartmentsData]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[department_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_id]"
+                      name="department_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[department_name]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_name]"
+                      name="department_name"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[manager_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[manager_id]"
+                      name="manager_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[location_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[location_id]"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[location_id]"
+                      name="location_id"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="department_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[department_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="department_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="manager_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[location_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="location_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[department_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[department_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[employee_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="employee_id"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[employee_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_name"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[last_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[email]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[phone_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="phone_number"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[phone_number]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[hire_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hire_date"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[hire_date]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[job_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="job_id"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[job_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="salary"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[salary]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[commission_pct]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="commission_pct"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[commission_pct]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[manager_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manager_id"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[manager_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[department_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[department_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[department_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_name"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[department_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[manager_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manager_id"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[manager_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[location_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="location_id"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[location_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[employee_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[employee_id]"
+                      name="employee_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[employee_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[first_name]"
+                      name="first_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[first_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[last_name]"
+                      name="last_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[last_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[email]"
+                      name="email">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[email]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[phone_number]"
+                      name="phone_number">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[phone_number]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[hire_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[hire_date]"
+                      name="hire_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[hire_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[job_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[job_id]"
+                      name="job_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[job_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[salary]"
+                      name="salary">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[salary]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[commission_pct]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[commission_pct]"
+                      name="commission_pct">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[commission_pct]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[manager_id]"
+                      name="manager_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[manager_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[department_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[department_name]"
+                      name="department_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[department_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[manager_id (1)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[manager_id (1)]"
+                      name="manager_id (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[manager_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[location_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[location_id]"
+                      name="location_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[department_id]"
+                      name="department_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input].Columns[department_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Employee_Flat]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 50</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Employees Data\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TECH-009\LOCALSQLSERVER]"
+                  connectionManagerRefId="Package.ConnectionManagers[TECH-009\LOCALSQLSERVER]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[employee_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="employee_id"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employee_id]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[employee_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_name"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[last_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[email]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[phone_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="phone_number"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[phone_number]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[phone_number]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[hire_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hire_date"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[hire_date]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[hire_date]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[job_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="job_id"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[job_id]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[job_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="salary"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[salary]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[salary]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[commission_pct]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="commission_pct"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[commission_pct]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[commission_pct]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[manager_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manager_id"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[manager_id]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[manager_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[department_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[department_id]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[department_id]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[department_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_name"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[department_name]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[department_name]" />
+                    <inputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[location_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="location_id"
+                      externalMetadataColumnId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[location_id]"
+                      lineageId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output].Columns[location_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employee_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="phone_number" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[hire_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="hire_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[job_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="salary" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[commission_pct]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="commission_pct" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="manager_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="department_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[department_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="department_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[location_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="location_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Employees Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Employees Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[employee_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="employee_id"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_name"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="email"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[email]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[phone_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="phone_number"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[hire_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="hire_date"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[job_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="job_id"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[salary]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="salary"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[salary]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[commission_pct]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="commission_pct"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[commission_pct]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[manager_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manager_id"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort.Inputs[Sort Input].Columns[department_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_id"
+                      lineageId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[employee_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[employee_id]"
+                      name="employee_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[first_name]"
+                      name="first_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[last_name]"
+                      name="last_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[email]"
+                      name="email">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[email]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[phone_number]"
+                      name="phone_number">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[hire_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[hire_date]"
+                      name="hire_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[job_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[job_id]"
+                      name="job_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[salary]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[salary]"
+                      name="salary">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[salary]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[commission_pct]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[commission_pct]"
+                      name="commission_pct">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[commission_pct]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[manager_id]"
+                      name="manager_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort.Outputs[Sort Output].Columns[department_id]"
+                      name="department_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Employees Data\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load Employees Data\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort 1.Inputs[Sort Input].Columns[department_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_id"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort 1.Inputs[Sort Input].Columns[department_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="department_name"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort 1.Inputs[Sort Input].Columns[manager_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manager_id"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[manager_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Employees Data\Sort 1.Inputs[Sort Input].Columns[location_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="location_id"
+                      lineageId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[location_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Employees Data\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[department_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[department_id]"
+                      name="department_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[department_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[department_name]"
+                      name="department_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[department_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[manager_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[manager_id]"
+                      name="manager_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[manager_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[location_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load Employees Data\Sort 1.Outputs[Sort Output].Columns[location_id]"
+                      name="location_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output].Columns[location_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Employees Data.Paths[Data Conversion Output]"
+              endId="Package\Load Employees Data\Conditional Split.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\Load Employees Data\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Error]"
+              endId="Package\Load Employees Data\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Error"
+              startId="Package\Load Employees Data\Conditional Split.Outputs[Error]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Flat File Source Output]"
+              endId="Package\Load Employees Data\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Load Employees Data\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Flat File Source Output1]"
+              endId="Package\Load Employees Data\Sort 1.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Load Employees Data\Flat File Source 1.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Merge Join Output]"
+              endId="Package\Load Employees Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Load Employees Data\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Remove Lower Earners]"
+              endId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Left Input]"
+              name="Remove Lower Earners"
+              startId="Package\Load Employees Data\Conditional Split.Outputs[Remove Lower Earners]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Sort Output]"
+              endId="Package\Load Employees Data\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Load Employees Data\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\Load Employees Data.Paths[Sort Output1]"
+              endId="Package\Load Employees Data\Data Conversion.Inputs[Data Conversion Input]"
+              name="Sort Output"
+              startId="Package\Load Employees Data\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Load Employees Data"
+          TopLeft="56,68" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="295,129" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Bulk Insert Task"
+          TopLeft="176,268" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Employees Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load Employees Data\Flat File Source"
+          TopLeft="207,87" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Employees Data\OLE DB Destination"
+          TopLeft="464,467" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Load Employees Data\Merge Join"
+          TopLeft="486,367" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Load Employees Data\Flat File Source 1"
+          TopLeft="627,74" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Load Employees Data\Sort"
+          TopLeft="261,212" />
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Flat File Source Output]"
+          TopLeft="282.5,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.5,83"
+              Start="0,0"
+              End="27.5,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5"
+                    Point2="0,41.5"
+                    Point3="4,41.5" />
+                  <mssgle:LineSegment
+                    End="23.5,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.5,41.5"
+                    Point2="27.5,41.5"
+                    Point3="27.5,45.5" />
+                  <mssgle:LineSegment
+                    End="27.5,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-6.81447265625,46.5,41.1289453125,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Load Employees Data\Sort 1"
+          TopLeft="708,233" />
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Flat File Source Output1]"
+          TopLeft="707,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.5,117"
+              Start="0,0"
+              End="54.5,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.5"
+                    Point2="0,58.5"
+                    Point3="4,58.5" />
+                  <mssgle:LineSegment
+                    End="50.5,58.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,58.5"
+                    Point2="54.5,58.5"
+                    Point3="54.5,62.5" />
+                  <mssgle:LineSegment
+                    End="54.5,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.1298828125,63.5,36.240234375,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Sort Output]"
+          TopLeft="761.5,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-190.166666666667,92"
+              Start="0,0"
+              End="-190.166666666667,84.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5288753799392" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.5288753799392"
+                    Point2="0,54.5288753799392"
+                    Point3="-4,54.5288753799392" />
+                  <mssgle:LineSegment
+                    End="-186.166666666667,54.5288753799392" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-186.166666666667,54.5288753799392"
+                    Point2="-190.166666666667,54.5288753799392"
+                    Point3="-190.166666666667,58.5288753799392" />
+                  <mssgle:LineSegment
+                    End="-190.166666666667,84.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-113.203450520833,59.5288753799392,36.240234375,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Merge Join Output]"
+          TopLeft="550.25,409">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.08349609375,20.44873046875,36.1669921875,9.6025390625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Load Employees Data\Conditional Split"
+          TopLeft="425,180" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load Employees Data\Data Conversion"
+          TopLeft="214,289" />
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Sort Output1]"
+          TopLeft="310,254">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18,35"
+              Start="0,0"
+              End="-18,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-14,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14,17.5"
+                    Point2="-18,17.5"
+                    Point3="-18,21.5" />
+                  <mssgle:LineSegment
+                    End="-18,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-29.56447265625,22.5,41.1289453125,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Data Conversion Output]"
+          TopLeft="316.666666666667,289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="185.833333333333,-67"
+              Start="0,0"
+              End="185.833333333333,-59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.2081218274112" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.2081218274112"
+                    Point2="0,-27.2081218274112"
+                    Point3="4,-27.2081218274112" />
+                  <mssgle:LineSegment
+                    End="181.833333333333,-27.2081218274112" />
+                  <mssgle:CubicBezierSegment
+                    Point1="181.833333333333,-27.2081218274112"
+                    Point2="185.833333333333,-27.2081218274112"
+                    Point3="185.833333333333,-31.2081218274112" />
+                  <mssgle:LineSegment
+                    End="185.833333333333,-59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="72.3521940104167,-22.2081218274112,41.1289453125,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Remove Lower Earners]"
+          TopLeft="528.833333333333,222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,145"
+              Start="0,0"
+              End="0,137.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,137.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-83.035390625,60.75,166.07078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Load Employees Data\Flat File Destination"
+          TopLeft="280,380" />
+        <EdgeLayout
+          Id="Package\Load Employees Data.Paths[Error]"
+          TopLeft="502.5,222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-136.5,158"
+              Start="0,0"
+              End="-136.5,150.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75"
+                    Point2="0,79"
+                    Point3="-4,79" />
+                  <mssgle:LineSegment
+                    End="-132.5,79" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-132.5,79"
+                    Point2="-136.5,79"
+                    Point3="-136.5,83" />
+                  <mssgle:LineSegment
+                    End="-136.5,150.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-102.41173828125,84,68.3234765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Employees Data\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
